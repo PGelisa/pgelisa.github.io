@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Kompendier"
+  reader-mode: true
+  page-footer:
+    left: |
+      Kompendier i Geofag 2 er skrevet av Elisabeth Engum (PGelisa på tur)
+    right: |
+      Boken er tilpasset Geofag 2 etter LK20
+  author: "Elisabeth Engum"
+  date: today
+  search: true
+  repo-url: https://github.com/PGelisa/pgelisa.github.io
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
+  page-navigation: true
+  sidebar:
+    style: docked
+    background: light
+    
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
