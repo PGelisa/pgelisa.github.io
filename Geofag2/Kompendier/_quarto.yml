@@ -19,6 +19,8 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   
+  
+  
   page-navigation: true
   sidebar:
     style: docked
@@ -28,6 +30,7 @@ book:
     - index.qmd
     - intro.qmd
     - Ulikheter.ipynb
+    - Drivhuseffekten_Temperatur.ipynb
     
     
     
@@ -41,9 +44,20 @@ format:
       - cosmo
       - pgelisa.scss
     author-meta: "PGelisa på tur"
-    callout-appearance: simple
+  
   pdf:
     documentclass: scrreprt
-
+    
+crossref:
+    fig-title: Figur
+    fig-prefix: figur
+    eq-prefix:  formel
+    exm-title: Eksempel
+    exr-title: Oppgave
+    tbl-prefix: tabell
+    tbl-title: Tabell
+    
+toc-title: Innholdsfortegnelse
+    
 editor: visual
 
