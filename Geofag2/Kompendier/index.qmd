@@ -1,13 +1,9 @@
----
-jupyter: python3
----
+# Forord {.unnumbered}
 
-# Preface {.unnumbered}
+Dette er en samling med ressurser som jeg jobber med i Geofag 2- undervisningen. Det er ikke dekkende for hele læreplanen i Geofag 2, og jeg garanterer ikke at det er feilfritt.
 
-This is a Quarto book.
+Ta gjerne kontakt om du oppdager feil i kompendiet
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Lykke til med Geofag 2!
 
-```{python}
-1 + 1
-```
+mvh Elisabeth Engum

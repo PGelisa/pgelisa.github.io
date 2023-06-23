@@ -2,12 +2,17 @@
 jupyter: python3
 ---
 
-# Introduction
+# Introduksjon
 
-This is a book created from markdown and executable code.
+Denne boken kan brukes som supplement eller støtte til undervisning.
 
-See @knuth84 for additional discussion of literate programming.
+Det som finnes av kodeinnhold er skrevet i jypyter (Python3).
 
 ```{python}
-1 + 1
+omega = 1361                # solarkonstanten (W/m^2)
+sigma = 5.6704*1E-8         # Stefan-Boltzman-konstant (W/m^2 K^4)
+alpha = 0.31                # albedo: den delen av strålingen som reflekteres av solen
+Te_jord_ingen_atm = (omega*(1-alpha)/(4*sigma)) **(1/4)
+
+print("%.2f" %(Te_jord_ingen_atm -273),'°C')
 ```

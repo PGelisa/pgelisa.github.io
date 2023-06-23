@@ -7,15 +7,18 @@ book:
   reader-mode: true
   page-footer:
     left: |
-      Kompendier i Geofag 2 er skrevet av Elisabeth Engum (PGelisa på tur)
+      Kompendier i Geofag 2 er skrevet av Elisabeth Engum
     right: |
-      Boken er tilpasset Geofag 2 etter LK20
+      Innholdet er tilpasset Geofag 2 etter LK20
   author: "Elisabeth Engum"
   date: today
   search: true
   repo-url: https://github.com/PGelisa/pgelisa.github.io
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
   page-navigation: true
   sidebar:
     style: docked
@@ -24,14 +27,21 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - Ulikheter.ipynb
+    
+    
+    
 
-bibliography: references.bib
+bibliography: 
+  - references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      - cosmo
+      - pgelisa.scss
+    author-meta: "PGelisa på tur"
+    callout-appearance: simple
   pdf:
     documentclass: scrreprt
 
