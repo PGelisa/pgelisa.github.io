@@ -6,6 +6,8 @@ jupyter: python3
 
 Denne boken kan brukes som supplement eller støtte til undervisning.
 
+## Python-koder
+
 Det som finnes av kodeinnhold er skrevet i jypyter (Python3).
 
 ```{python}
@@ -16,3 +18,85 @@ Te_jord_ingen_atm = (omega*(1-alpha)/(4*sigma)) **(1/4)
 
 print("%.2f" %(Te_jord_ingen_atm -273),'°C')
 ```
+
+
+::: {.callout-caution appearance="simple" icon=false}
+Eksempel på elementer / liste:  $x\in\{-1, 2, 5\}$ som betyr at vi har at x bare kan være lik $-1$, $2$ eller $5$, og ingen andre verdier
+
+Eksempel på åpne intervaller: $x\in\langle 2, 4\rangle$ som betyr alle tall på tallinjen som er større enn $2$ og samtidig er mindre enn $4$
+
+Eksempel på lukkete intervaller: $x\in\left[-1, 4\right]$ som betyr alle tall på tallinjen som er større enn eller lik $-1$ og samtidig mindre enn eller lik $4$.
+:::
+
+::: {.callout-note}
+
+### Ulikhet
+
+En ulikhet består av et ulikhetssymbol med tall eller uttrykk på hver side
+:::
+
+::: {.callout-caution  icon=false}
+
+#### Eksempel
+
+Mohammed og Turid skal bestille taxi, og vet ikke hva som er billigst av 1 Taxi AS eller ABC Taxi AS. Prisene er gitt som 
+
+|           | 1 Taxi AS | ABC Taxi AS|
+|-----------|----------|------------|
+| Startpris | 104 kr | 112 kr |
+| Pris per km | 10,80 kr | 10,50 kr |
+
+For hvilke avstander (i km) er ABC Taxi AS billigst?
+:::
+::: {.callout-caution appearance="simple" icon=false}
+
+#### Svar
+
+Vi lar $y$ være prisen for taxi-turen, og $x$ antall kilometer. Da får vi følgende uttrykk for prisene.
+
+| 1 Taxi AS | ABC Taxi AS |
+|---|---|
+| $y = 104 + 10,80\cdot x$ | $y = 112 + 10,50\cdot x$ |
+
+Hvis vi setter uttrykkene lik hverandre, så finner vi ut for hvilken avstand det er lik pris. Men vi er jo på jakt etter når ABC Taxi AS er billigst. Vi får altså en ulikhet, der vi skal finne ut når prisen på 1 Taxi er større enn prisen for ABC Taxi. Det kan vi skrive som følger:
+
+$$ 104 + 10,80\cdot x > 112 + 10,50\cdot x$$
+
+:::
+
+## Lineære ulikheter (basert på NDLA) 
+En ulikhet inneholder gjerne en eller flere ukjente størrelser symbolisert med bokstaver. Det er vanlig å bruke bokstaven $x$ for den ukjente når ulikheten har én ukjent størrelse.
+
+Et eksempel er ulikheten
+$$ x + 3 \geq 8 $$ {#eq-ulikhet1}
+
+
+Å **løse** en ulikhet går ut på å finne hvilke verdier $x$ kan ha for at ulikheten skal være sann. For eksempel, hvilke verdier av $x$ i ulikheten ovenfor gjør at $x + 3$ blir lik eller større enn $8$?
+
+::: {.callout-important icon=false} 
+
+### Men hva med multiplikasjon og divisjon? 
+
+La oss se på $4 > 2$:
+
+Hvis vi multipliserer hver side av ulikheten med 2, så får vi:
+
+Venstre side: $4\cdot 2 = 8$
+Høyre side: $2\cdot 2 = 4$
+
+Vi ser at ulikheten fortsatt er gyldig om vi multipliserer med et positivt tall, fordi $8>4$.
+
+Men hva skjer om vi multipliserer med et **negativt tall** som for eksempel $-3$?
+
+Venstre side: $4\cdot(-3)=-12$
+Høyre side: $2\cdot(-2)=-6$
+
+Men $-12$ er jo mindre enn $-6$, $-12$ ligger lengre til venstre på tallinjen enn $-6$, og vi har fått at $4\cdot(-3)<2\cdot(-3)$!
+
+:::
+::: {.callout-note}
+
+### Multiplikasjon og divisjon med negative tall
+
+Vi må alltid snu ulikhetstegnet når vi multipliserer eller dividerer med negative tall
+:::
