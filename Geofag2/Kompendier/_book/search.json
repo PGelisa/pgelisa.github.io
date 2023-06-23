@@ -124,5 +124,26 @@
     "title": "1  Introduksjon",
     "section": "1.2 Lineære ulikheter (basert på NDLA)",
     "text": "1.2 Lineære ulikheter (basert på NDLA)\nEn ulikhet inneholder gjerne en eller flere ukjente størrelser symbolisert med bokstaver. Det er vanlig å bruke bokstaven \\(x\\) for den ukjente når ulikheten har én ukjent størrelse.\nEt eksempel er ulikheten \\[ x + 3 \\geq 8  \\tag{1.1}\\]\nÅ løse en ulikhet går ut på å finne hvilke verdier \\(x\\) kan ha for at ulikheten skal være sann. For eksempel, hvilke verdier av \\(x\\) i ulikheten ovenfor gjør at \\(x + 3\\) blir lik eller større enn \\(8\\)?\n\n\n\n\n\n\nMen hva med multiplikasjon og divisjon?\n\n\n\nLa oss se på \\(4 &gt; 2\\):\nHvis vi multipliserer hver side av ulikheten med 2, så får vi:\nVenstre side: \\(4\\cdot 2 = 8\\) Høyre side: \\(2\\cdot 2 = 4\\)\nVi ser at ulikheten fortsatt er gyldig om vi multipliserer med et positivt tall, fordi \\(8&gt;4\\).\nMen hva skjer om vi multipliserer med et negativt tall som for eksempel \\(-3\\)?\nVenstre side: \\(4\\cdot(-3)=-12\\) Høyre side: \\(2\\cdot(-2)=-6\\)\nMen \\(-12\\) er jo mindre enn \\(-6\\), \\(-12\\) ligger lengre til venstre på tallinjen enn \\(-6\\), og vi har fått at \\(4\\cdot(-3)&lt;2\\cdot(-3)\\)!\n\n\n\n\n\n\n\n\nMultiplikasjon og divisjon med negative tall\n\n\n\nVi må alltid snu ulikhetstegnet når vi multipliserer eller dividerer med negative tall"
+  },
+  {
+    "objectID": "kapittel1.html",
+    "href": "kapittel1.html",
+    "title": "Hva er geofag?",
+    "section": "",
+    "text": "Geofag handler om å forstå jordsystemene, både hvordan de virker sammen og hver for seg, og hvordan de former jorda over tid. Geofaglige undersøkelser i faget skal bidra til at elevene utvikler en helhetlig forståelse av jorda som system og menneskets plass i jordsystemene. Videre skal faget bidra til kunnskap om hvordan menneskene kan påvirke og leve med klimaendringer og naturfarer, og bidra til en mer bærekraftig ressursutnyttelse. Fordypning i geofaglige problemstillinger forbereder elevene til videre studier og deltakelse i arbeids- og samfunnsliv. (læreplan?)\n\nI geofag jobber vi med jordsystemene geosfæren, atmosfæren, hydrosfæren, kryosfæren og biosfæren. Geofag 2 går i dybden på atmosfæren, havet og kryosfæren. I tillegg ser vi på hvordan disse jordsystemene vekselvirker, og ikke minst hvordan geosfæren, den resterende hydrosfæren og biosfæren påvirker de andre jordsystemene."
+  },
+  {
+    "objectID": "ref_kap1.html",
+    "href": "ref_kap1.html",
+    "title": "Referanser kapittel 1",
+    "section": "",
+    "text": "Utdanningsdirektoratet. (2020). Læreplan i geofag (GFG01-02).\nRetrieved from https://www.udir.no/lk20/gfg01-02"
+  },
+  {
+    "objectID": "kapittel1.html#hva-er-geofag",
+    "href": "kapittel1.html#hva-er-geofag",
+    "title": "Introduksjon",
+    "section": "Hva er geofag?",
+    "text": "Hva er geofag?\n\nGeofag handler om å forstå jordsystemene, både hvordan de virker sammen og hver for seg, og hvordan de former jorda over tid. Geofaglige undersøkelser i faget skal bidra til at elevene utvikler en helhetlig forståelse av jorda som system og menneskets plass i jordsystemene. Videre skal faget bidra til kunnskap om hvordan menneskene kan påvirke og leve med klimaendringer og naturfarer, og bidra til en mer bærekraftig ressursutnyttelse. Fordypning i geofaglige problemstillinger forbereder elevene til videre studier og deltakelse i arbeids- og samfunnsliv. (Læreplan i geofag (GFG01-02), 2020)\n\nI geofag jobber vi med jordsystemene geosfæren, atmosfæren, hydrosfæren, kryosfæren og biosfæren. Geofag 2 går i dybden på atmosfæren, havet og kryosfæren. I tillegg ser vi på hvordan disse jordsystemene vekselvirker, og ikke minst hvordan geosfæren, den resterende hydrosfæren og biosfæren påvirker de andre jordsystemene.\n\n\n\n\nLæreplan i geofag (GFG01-02). (2020). Utdanningsdirektoratet. Retrieved from https://www.udir.no/lk20/gfg01-02"
   }
 ]
