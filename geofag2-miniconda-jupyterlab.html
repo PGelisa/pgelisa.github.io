@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geofag 2 – Miniconda og JupyterLab</title>
+  <meta name="description" content="Oppskrift for Geofag 2-elever: installere Miniconda, lage miljø og jobbe i JupyterLab." />
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --surface-2: #f1efe9;
+      --text: #22201a;
+      --muted: #66645f;
+      --border: #d8d3ca;
+      --accent: #01696f;
+      --accent-2: #0c4e54;
+      --code: #f3f7f7;
+      --warn: #964219;
+      --ok: #437a22;
+      --max: 960px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      background: linear-gradient(135deg, #f9f8f5 0%, #eef5f4 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 1.25rem 2rem;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    h1, h2, h3 { line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 4vw, 3.5rem); margin: 0 0 1rem; }
+    h2 { font-size: clamp(1.5rem, 2.5vw, 2.1rem); margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 0.6rem; }
+    p, li { font-size: 1rem; }
+    .lead { font-size: 1.1rem; color: var(--muted); max-width: 70ch; }
+    nav {
+      margin-top: 1.5rem;
+      display: flex; gap: .75rem; flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none; color: white; background: var(--accent);
+      padding: .7rem 1rem; border-radius: 999px; font-size: .95rem;
+    }
+    main { padding: 2rem 1.25rem 4rem; }
+    section, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin: 1rem 0 1.25rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    }
+    .note {
+      background: #fff8f2;
+      border-left: 4px solid var(--warn);
+      padding: .9rem 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    .ok {
+      background: #f3f8f0;
+      border-left: 4px solid var(--ok);
+      padding: .9rem 1rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: var(--code);
+      padding: .12rem .35rem;
+      border-radius: 6px;
+      font-size: .95em;
+    }
+    pre {
+      background: #0f1720;
+      color: #ecf3f2;
+      padding: 1rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: .95rem;
+    }
+    pre code { background: transparent; padding: 0; color: inherit; }
+    table {
+      width: 100%; border-collapse: collapse; margin: 1rem 0;
+      background: var(--surface);
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: .8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--surface-2); }
+    ul, ol { padding-left: 1.3rem; }
+    .small { color: var(--muted); font-size: .95rem; }
+    footer {
+      padding: 2rem 1.25rem 3rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Geofag 2: Miniconda og JupyterLab</h1>
+      <p class="lead">Denne siden viser hvordan du installerer Miniconda, lager et Python-miljø for Geofag 2, og bruker JupyterLab til å åpne, lage og lagre notebooks.</p>
+      <nav>
+        <a href="#installasjon">1. Installasjon</a>
+        <a href="#miljo">2. Lage miljø</a>
+        <a href="#jobbe">3. Jobbe i JupyterLab</a>
+        <a href="#feil">Vanlige feil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="installasjon">
+      <h2>1. Installer Miniconda</h2>
+      <p>Miniconda er en liten pakke som gjør det enkelt å installere Python og fagbiblioteker på en trygg måte. Installer riktig versjon for din maskin.</p>
+
+      <h3>Mac med Apple Silicon (M1, M2, M3 ...)</h3>
+      <ol>
+        <li>Gå til <a href="https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions" target="_blank" rel="noopener noreferrer">Miniconda installasjon</a>.</li>
+        <li>Last ned <code>Miniconda3-latest-MacOSX-arm64.pkg</code>.</li>
+        <li>Dobbeltklikk på filen og fullfør installasjonen.</li>
+        <li>Åpne Terminal etterpå.</li>
+      </ol>
+
+      <h3>Mac med Intel</h3>
+      <ol>
+        <li>Last ned <code>Miniconda3-latest-MacOSX-x86_64.pkg</code>.</li>
+        <li>Kjør installasjonen og åpne Terminal etterpå.</li>
+      </ol>
+
+      <h3>Windows</h3>
+      <ol>
+        <li>Last ned Miniconda for Windows 64-bit.</li>
+        <li>Kjør installasjonsfilen.</li>
+        <li>Åpne en ny Kommandoprompt eller PowerShell etterpå.</li>
+      </ol>
+
+      <div class="note">
+        Ikke installer Anaconda. I Geofag 2 holder det med Miniconda, som er mindre og enklere.
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Klargjør conda første gang</h2>
+      <p>På Mac må conda kobles til standardskallet ditt. macOS bruker vanligvis <code>zsh</code>.</p>
+      <pre><code>conda init zsh</code></pre>
+      <p>Lukk terminalvinduet og åpne et nytt terminalvindu etterpå.</p>
+      <div class="ok">
+        Hvis alt virker, ser du ofte <code>(base)</code> først i terminalen når du åpner et nytt vindu.
+      </div>
+    </section>
+
+    <section id="miljo">
+      <h2>3. Legg til riktig kanal og lag miljøet</h2>
+      <p>Noen geofag-pakker, som <code>netCDF4</code> og <code>cartopy</code>, finnes best via <code>conda-forge</code>. Derfor legger vi til den kanalen og bruker streng prioritet.</p>
+      <pre><code>conda config --add channels conda-forge
+conda config --set channel_priority strict</code></pre>
+
+      <p>Lag deretter et nytt miljø som heter <code>geofag2</code>:</p>
+      <pre><code>conda create -n geofag2 python=3.13 jupyterlab numpy pandas matplotlib scipy geopandas netCDF4 xarray cartopy</code></pre>
+
+      <p>Når du får spørsmålet <code>Proceed ([y]/n)?</code>, skriver du <code>y</code> og trykker Enter.</p>
+
+      <h3>Hva betyr dette?</h3>
+      <table>
+        <tr><th>Kommando</th><th>Forklaring</th></tr>
+        <tr><td><code>conda create -n geofag2</code></td><td>Lager et eget miljø som heter geofag2.</td></tr>
+        <tr><td><code>python=3.13</code></td><td>Installerer Python-versjonen vi skal bruke.</td></tr>
+        <tr><td><code>jupyterlab</code></td><td>Installerer JupyterLab, som brukes til notebooks.</td></tr>
+        <tr><td><code>numpy pandas matplotlib scipy</code></td><td>Vanlige bibliotek for matematikk, data og figurer.</td></tr>
+        <tr><td><code>geopandas netCDF4 xarray cartopy</code></td><td>Bibliotek for kart, geodata og klimadata.</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. Start miljøet og åpne JupyterLab</h2>
+      <p>Hver gang du skal jobbe, gjør du dette i terminalen:</p>
+      <pre><code>conda activate geofag2
+jupyter lab</code></pre>
+      <p>Da åpnes JupyterLab i nettleseren din. Det kjører lokalt på maskinen din og kan brukes offline når miljøet først er installert.</p>
+    </section>
+
+    <section id="jobbe">
+      <h2>5. Slik jobber du i JupyterLab</h2>
+
+      <h3>Lage en ny notebook</h3>
+      <ol>
+        <li>Se på filpanelet til venstre.</li>
+        <li>Klikk på <code>+</code> for å åpne Launcher.</li>
+        <li>Klikk på <strong>Python</strong> under Notebook.</li>
+      </ol>
+
+      <h3>Åpne en notebook fra lærer</h3>
+      <ol>
+        <li>Last ned filen som læreren har delt, vanligvis en <code>.ipynb</code>-fil.</li>
+        <li>Lagre filen i en mappe du finner igjen, for eksempel <code>Geofag2</code>.</li>
+        <li>I JupyterLab kan du dobbeltklikke på filen i filpanelet for å åpne den.</li>
+      </ol>
+
+      <h3>Lagre arbeidet ditt</h3>
+      <ul>
+        <li>JupyterLab lagrer ofte automatisk.</li>
+        <li>Du kan også velge <code>File → Save Notebook</code>.</li>
+        <li>Gi filene tydelige navn, for eksempel <code>havstrommer-oppgave-1.ipynb</code>.</li>
+      </ul>
+
+      <h3>Kjøre kode</h3>
+      <ul>
+        <li>Skriv kode i en celle.</li>
+        <li>Trykk <code>Shift + Enter</code> for å kjøre cellen.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Test at alt virker</h2>
+      <p>Lag en ny notebook og prøv denne koden:</p>
+      <pre><code>import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import xarray as xr
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.title("Testfigur")
+plt.show()</code></pre>
+      <p>Hvis du får en figur, fungerer miljøet ditt.</p>
+    </section>
+
+    <section id="feil">
+      <h2>Vanlige feil</h2>
+
+      <h3>Feil 1: <code>conda: command not found</code></h3>
+      <p>Åpne en ny terminal. På Mac kan du også kjøre:</p>
+      <pre><code>conda init zsh</code></pre>
+
+      <h3>Feil 2: Pakker blir ikke funnet</h3>
+      <p>Pass på at du har aktivert riktig miljø:</p>
+      <pre><code>conda activate geofag2</code></pre>
+
+      <h3>Feil 3: Du skrev feil pakkenavn</h3>
+      <p>Det riktige navnet er <code>netCDF4</code>, ikke <code>netCD4</code> eller <code>netcd4</code>.</p>
+
+      <h3>Feil 4: JupyterLab starter ikke</h3>
+      <p>Prøv først:</p>
+      <pre><code>conda activate geofag2
+jupyter lab</code></pre>
+    </section>
+
+    <section>
+      <h2>Kortversjon</h2>
+      <pre><code>conda init zsh
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda create -n geofag2 python=3.13 jupyterlab numpy pandas matplotlib scipy geopandas netCDF4 xarray cartopy
+conda activate geofag2
+jupyter lab</code></pre>
+      <p class="small">Tips: kopier kommandoene én og én hvis du er usikker.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Denne siden er laget som en enkel GitHub-publiserbar HTML-fil for Geofag 2.
+    </div>
+  </footer>
+</body>
+</html>
